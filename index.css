@@ -12,6 +12,7 @@
     --chat-right: 30%
 }
 html{
+    scrollbar-width: none;
     font-family: "Inter";
     background-size: cover;
     background-position: center;
