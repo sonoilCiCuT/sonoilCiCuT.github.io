@@ -2,15 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @font-face {
     font-family: "Title";
-    src:  url('http://localhost/lequire/Lequire.otf');
+    src:  url('Lequire.otf');
 }
 @font-face {
     font-family: "Cenios";
-    src:  url('http://localhost/cenios/Cenios-Regular.otf');
-}
-@font-face {
-    font-family: "MyFont";
-    src:  url('http://localhost/azonix/Azonix.otf');
+    src:  url('Cenios-Regular.otf');
 }
 :root{
     --chat-right: 30%
