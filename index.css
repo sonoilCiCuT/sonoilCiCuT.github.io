@@ -2,12 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @font-face {
     font-family: "Title";
-    src:  url('./Lequire.otf');
+    src:  url('http://localhost/lequire/Lequire.otf');
 }
-
 @font-face {
     font-family: "Cenios";
-    src:  url('./Cenios-Regular.otf');
+    src:  url('http://localhost/cenios/Cenios-Regular.otf');
+}
+@font-face {
+    font-family: "MyFont";
+    src:  url('http://localhost/azonix/Azonix.otf');
 }
 :root{
     --chat-right: 30%
@@ -76,24 +79,28 @@ nav>div{
 }
 .cont{
     color:white;
-    
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 .title{
     font-family: "Title";
-    
+    white-space: nowrap;
     align-items: center;
     align-content: end;
     display: flex;
     line-height: 1;
     letter-spacing: .2rem;
+    flex-wrap: nowrap;
 }
 .title>span{
+    white-space: nowrap;
     margin-bottom: -2rem;
     line-height: 1;
     font-size: 800%;
     font-weight: 100;
     align-items: center;
     align-content: center;
+    flex-wrap: nowrap; 
 }
 .title>img{
     align-self: center;
