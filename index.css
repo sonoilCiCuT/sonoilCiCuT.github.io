@@ -4,6 +4,11 @@
     font-family: "Title";
     src:  url('./Lequire.otf');
 }
+
+@font-face {
+    font-family: "Cenios";
+    src:  url('./Cenios-Regular.otf');
+}
 :root{
     --chat-right: 30%
 }
