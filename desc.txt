@@ -1,0 +1,143 @@
+[Green computing](https://en.wikipedia.org/wiki/Green_computing)
+
+[Green Software engineering: la sostenibilità passa dagli ingegneri](https://www.esg360.it/sustainability-management/green-software-engineering-cose-perche-e-importante-per-lict/)
+
+[10 Recommendations for Green Software Development](https://greensoftware.foundation/articles/10-recommendations-for-green-software-development)
+
+[ippo-engineering.eu](https://www.ippo-engineering.eu/green-software-efficienza-energetica/)
+
+[bitrock.it](https://bitrock.it/it/blog-it/tecnologia/what-is-green-software.html)
+
+[arxiv.org](https://arxiv.org/abs/2407.19901)
+
+[digital4.biz](https://www.digital4.biz/executive/digital-transformation/green-software/)
+
+[arxiv.org](https://arxiv.org/abs/2402.18227)
+
+### Che cosa sono i Software Green
+
+I **software green** sono applicazioni e sistemi progettati, sviluppati e gestiti in modo da ridurre al minimo l'impatto ambientale. Questo approccio implica che, durante l'intero ciclo di vita del software— dalla fase di progettazione alla scrittura del codice, fino all'esecuzione su dispositivi e data center— vengano adottate pratiche sostenibili. L'obiettivo è ottimizzare l'efficienza energetica, ridurre le emissioni di gas serra e garantire un uso responsabile delle risorse hardware.
+
+Le caratteristiche principali dei software green includono:
+
+- **Ottimizzazione del consumo energetico:** L'adozione di tecniche di coding efficienti e l'implementazione di algoritmi ottimizzati permettono di ridurre l'energia necessaria per eseguire le applicazioni. Questo non solo abbassa i costi operativi, ma contribuisce anche alla diminuzione dell'impronta ecologica complessiva.
+- **Minimizzazione dell'impronta di carbonio:** Attraverso metodologie di "carbon-aware computing", i software possono essere progettati per funzionare in orari in cui l'energia proviene maggiormente da fonti rinnovabili, o per adattarsi alle variazioni nell'intensità di carbonio dell'elettricità disponibile. Questo approccio aiuta a ridurre le emissioni associate all'esecuzione del software.
+- **Estensione della vita utile dell'hardware:** Un design software efficiente può ridurre il carico sui dispositivi hardware, prolungandone la durata e riducendo la necessità di frequenti aggiornamenti. Questo contribuisce alla diminuzione dei rifiuti elettronici e promuove un ciclo di vita più sostenibile per i dispositivi tecnologici.
+
+In sintesi, i software green rappresentano l'integrazione tra tecnologia e sostenibilità, rispondendo alle crescenti esigenze di riduzione dell'impatto ambientale nel settore digitale.
+
+### A cosa servono i Software Green
+
+I software green offrono una vasta gamma di benefici, sia per le organizzazioni che per gli utenti finali:
+
+- **Ottimizzazione delle risorse IT:** L'adozione di software efficienti consente una gestione più efficace dei data center e delle infrastrutture IT, riducendo lo spreco energetico e migliorando l'utilizzo delle risorse hardware. Questo porta a una maggiore efficienza operativa e a una riduzione dei costi associati all'infrastruttura tecnologica.
+- **Riduzione dei costi operativi:** Software progettati per essere energeticamente efficienti contribuiscono a diminuire i consumi, traducendosi in risparmi economici significativi. L'ottimizzazione del codice e l'uso intelligente delle risorse hardware possono portare a una diminuzione dei costi legati all'energia e alla manutenzione.
+- **Miglioramento dell'immagine aziendale:** L'adozione di pratiche di sviluppo software sostenibili rafforza la reputazione di un'azienda, dimostrando un impegno concreto verso la responsabilità sociale e ambientale. Questo può influenzare positivamente la percezione del brand da parte dei clienti e degli investitori.
+- **Conformità alle normative ambientali:** In molte regioni, esistono regolamenti che richiedono alle imprese di ridurre le proprie emissioni e di adottare pratiche sostenibili. L'implementazione di software green aiuta le aziende a conformarsi a queste normative, evitando sanzioni e migliorando la loro posizione nel mercato.
+- **Innovazione e competitività:** In un mercato sempre più orientato verso la sostenibilità, l'adozione di software ecologici può rappresentare un vantaggio competitivo. Le aziende che investono in tecnologie verdi sono percepite come innovative e responsabili, attirando clienti e talenti sensibili alle tematiche ambientali.
+
+### Migliori Pratiche e Approcci per lo Sviluppo
+
+Per sviluppare applicazioni green, gli ingegneri del software possono adottare diverse strategie e pratiche migliori:
+
+- **Green Coding:** Questo approccio implica la scrittura di codice efficiente che riduca al minimo l'utilizzo di risorse. L'ottimizzazione degli algoritmi e l'eliminazione del codice superfluo sono pratiche fondamentali per migliorare l'efficienza e ridurre il consumo energetico. Studi hanno dimostrato che piccole modifiche nel codice possono portare a significative riduzioni nel consumo energetico delle applicazioni.
+- **Misurazione dell'impronta energetica:** L'uso di strumenti e dashboard dedicati consente di monitorare in tempo reale il consumo energetico delle applicazioni e le emissioni associate. Questa visibilità permette agli sviluppatori di identificare aree di miglioramento e di implementare ottimizzazioni mirate.
+- **Carbon-aware scheduling:** Questo approccio prevede la pianificazione dell'esecuzione del software in orari in cui l'energia proviene maggiormente da fonti rinnovabili o quando l'intensità di carbonio dell'elettricità è più bassa. Ad esempio, alcune applicazioni possono essere programmate per funzionare durante le ore diurne, quando l'energia solare è abbondante, riducendo così l'impatto ambientale.
+- **Integrazione di standard e linee guida:** L'adozione di standard e best practices forniti da organizzazioni come la Green Software Foundation aiuta le aziende a sviluppare software ecologicamente responsabili. Questi standard offrono linee guida su come progettare, sviluppare e gestire applicazioni con un basso impatto ambientale, facilitando la condivisione di conoscenze e l'adozione di pratiche comuni nel settore.
+
+### Prospettive e Ricerca sul Green Software
+
+Il campo del green software è in continua evoluzione, con ricerche e sviluppi che mirano a identificare nuove opportunità per ridurre l'impatto ambientale delle tecnologie digitali. Studi recenti hanno analizzato lo stato dell'arte nella progettazione di software sostenibile, identificando aree di miglioramento e sfide aperte. La ricerca si concentra su aspetti come l'efficienza energetica, l'ottimizzazione delle risorse e l'integrazione di pratiche sostenibili nel ciclo di vita del software.
+
+Le prospettive future includono lo sviluppo di strumenti più avanzati per la misurazione e l'ottimizzazione dell'impronta energetica, l'adozione di nuove metodologie di sviluppo che incorporino principi di sostenibilità e la collaborazione tra industria, ricerca e governi per promuovere politiche e standard che favoriscano l'adozione di software green.
+
+### Green Software Engineering
+
+La **Green Software Engineering** è una disciplina emergente che combina i principi dell'ingegneria del software tradizionale con le esigenze della sostenibilità ambientale. Essa coinvolge competenze in climatologia, gestione dell'energia, progettazione di hardware e gestione dei data center, con l'obiettivo di sviluppare applicazioni software che siano sia efficienti che ecologicamente responsabili.
+
+Il **Green Software Engineering** si basa su otto principi fondamentali:
+
+1. **Carbonio (Carbon):** Questo principio sottolinea l'importanza di ridurre le emissioni di gas serra associate all'esecuzione del software. L'obiettivo è scrivere codice che massimizzi l'utilità riducendo al minimo le emissioni per unità di lavoro svolto.
+2. **Elettricità:** Riconoscendo che l'energia elettrica è spesso generata da fonti fossili, questo principio enfatizza la necessità di sviluppare applicazioni che consumino meno energia, oltre a rimuovere le funzionalità non utilizzate e rimuovere loop inefficienti, contribuendo così a ridurre le emissioni indirette associate all'uso del software.
+3. **Intensità di Carbonio:** Questo principio riguarda l'adattamento del software alle variazioni nell'intensità di carbonio dell'elettricità disponibile, ottimizzando le operazioni in base alla "pulizia" dell'energia utilizzata. 
+4. **Carbonio Incorporato:** Si riferisce alle emissioni legate alla produzione e allo smaltimento dell'hardware. Adottare pratiche che estendano la vita utile dei dispositivi e riducano la necessità di aggiornamenti frequenti può contribuire a diminuire l'impronta di carbonio incorporata. 
+5. **Proporzionalità Energetica:** Questo principio enfatizza l'importanza di allineare il consumo energetico del software con il carico di lavoro effettivo, garantendo che le risorse siano utilizzate in modo efficiente e scalate in base alle esigenze.
+6. **Rete:** Riconoscendo che la trasmissione di dati attraverso la rete comporta consumi energetici e emissioni, questo principio suggerisce di minimizzare il traffico dati e ottimizzare le comunicazioni per ridurre l'impatto ambientale. 
+7. **Strategie della Domanda:** Coinvolgere gli utenti nella consapevolezza dell'impatto ambientale del software può portare a scelte più sostenibili, come l'utilizzo del software durante periodi di bassa intensità di carbonio (spostamento della domanda) o l'adozione di modalità a basso consumo energetico (modellamento della domanda). 
+8. **Misurazione e Ottimizzazione:** L'implementazione di pratiche e strumenti di monitoraggio continuo delle emissioni e del consumo energetico consente di identificare aree di miglioramento e ottimizzare costantemente il software per ridurre l'impatto ambientale. 
+
+Adottando questi principi, le organizzazioni possono sviluppare software che non solo soddisfa le esigenze degli utenti, ma contribuisce anche a un futuro più sostenibile, riducendo l'impatto ambientale delle tecnologie digitali.
+
+### Altre opzioni di progettazione e codifica
+
+1. **Ridurre l'utilizzo dei dati**
+    
+    Implementare politiche di cache efficienti, minimizzare lo scambio di dati e gestire il ciclo di vita dei dati archiviati. Ciò include la compressione, l'aggregazione dei dati e l'uso di formati più leggeri, come immagini di dimensioni ottimizzate.
+    
+2. **Limitare l’accuratezza computazionale**
+    
+    Adeguare l'accuratezza computazionale al livello necessario per soddisfare le esigenze operative. Ad esempio, ridurre la precisione della geolocalizzazione quando non è richiesta una risoluzione elevata.
+    
+3. **Scelta del linguaggio di programmazione**
+    
+    La scelta del linguaggio di programmazione può influenzare significativamente l'efficienza energetica del software. Studi hanno esaminato vari linguaggi per valutare il consumo di energia, la velocità e l’utilizzo della memoria. Sebbene nessun linguaggio si riveli superiore in modo assoluto, è fondamentale considerare vari fattori, come le specifiche esigenze dell'applicazione e l’efficienza energetica.
+    
+
+### **Data Center Green**
+
+Il cloud è diventato l'ambiente prediletto per le applicazioni moderne, in quanto offre numerose opportunità di ottimizzazione energetica e riduzione degli sprechi, e se queste fossero sviluppate tenendo conto della sostenibilità, l’impatto positivo sul risparmio energetico sarebbe notevole. Questo risultato può essere ottenuto grazie alla distribuzione ottimizzata dei server e all’utilizzo di **software green**.
+
+Il cloud computing favorisce la riduzione delle emissioni di CO2 grazie all’efficienza derivante dall'aggregazione delle risorse di calcolo. Il software gioca un ruolo cruciale in questo processo, permettendo di ottimizzare l'uso delle risorse. Sul fronte **on-premise**, le applicazioni possono ridurre il consumo energetico tramite tecniche come la **compressione dei dati**, l’**edge computing** per gestire compiti localmente, o la distribuzione dei workload tra più processori.
+
+Inoltre, l'adozione di **architetture avanzate** e **più green**, come il **serverless computing** e i **container**, consente un controllo più preciso sulla capacità di calcolo e sul consumo energetico. Questi approcci favoriscono la **scalabilità dinamica**, ottimizzando l’utilizzo delle risorse in base alle necessità, riducendo così gli sprechi energetici ed economici.
+
+### **Pratiche di Sostenibilità nei Data Center**
+
+- **Cloud Computing e Green Hosting**
+    - **Provider green**: Utilizzo di servizi cloud alimentati da energie rinnovabili, come **Google Cloud** e **AWS**, che adottano pratiche di sostenibilità.
+    - **Scalabilità dinamica**: Permette di ridurre i consumi adattando le risorse in base alla domanda effettiva, evitando sprechi energetici.
+    - **Hardware ecologico**: Scegliere hardware progettato per l’efficienza energetica, con un minore impatto ambientale.
+- **Edge Computing**
+    
+    **Elaborazione locale**: I dati vengono elaborati direttamente sull'edge (lato dispositivo), riducendo la quantità di informazioni inviate al cloud e riducendo latenza e consumi energetici.
+    
+- **Decentralizzazione**
+    
+    **Distribuzione delle risorse**: Utilizzare architetture decentralizzate, in cui i carichi di lavoro vengono distribuiti tra diverse unità, ottimizzando le risorse e riducendo il carico su singoli data center.
+    
+- **Data Minimization**
+    
+    **Gestione dei dati**: Minimizzare i dati trattati, eliminando file inutili e riducendo la quantità di informazioni gestite, con un impatto positivo sul consumo energetico.
+    
+
+### **Come misurare un Green software**
+
+Il **Green software** viene misurato principalmente tramite il calcolo delle **emissioni di gas serra (GHG)**. Il **Protocollo GHG**, adottato dal 92% delle aziende Fortune 500, suddivide le emissioni in tre ambiti:
+
+1. **Ambito 1**: Emissioni dirette aziendali.
+2. **Ambito 2**: Emissioni indirette legate all'energia acquistata.
+3. **Ambito 3**: Emissioni lungo la catena di fornitura, inclusi i data center e l'infrastruttura cloud.
+
+Un altro strumento utile è il **Software Carbon Intensity (SCI)**, che misura le **emissioni di carbonio** specifiche del software. La SCI aiuta a monitorare e ridurre l'impronta di carbonio del software, promuovendo scelte più sostenibili durante lo sviluppo.
+
+Il calcolo dell’impronta di carbonio del software può essere complesso, specialmente per software **open-source**, dove i dati sul consumo energetico e le emissioni sono difficili da tracciare. La maggior parte delle emissioni di carbonio non è facilmente attribuibile, poiché molte aziende utilizzano software open-source, il che rende difficile monitorare e ridurre le emissioni in modo centralizzato.
+
+### Data center
+
+- Cloud computing e green hosting
+    - Utilizzo di provider green (Google Cloud, AWS) che sono alimentati da energie rinnovabili
+    - Scalabilità dinamica per evitare sprechi energetici ed economici
+    - Scelte hardware ecologiche
+- Edge computing
+    - Elabora i dati localmente e invia al cloud solo i risultati
+    - Meno latenza e consumi
+- Decentralizzazione
+- Data minimization
+    - File inutili obliterati
+        
+        ![IMG_0810.jpeg](attachment:6d723a74-d6a1-4b80-9c18-e58a120a0232:IMG_0810.jpeg)
+        
+
+### Data center
+
+I

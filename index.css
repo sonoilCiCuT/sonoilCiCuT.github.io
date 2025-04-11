@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@font-face {
+    font-family: "Title";
+    src:  url('http://localhost/lequire/Lequire.otf');
+}
+@font-face {
+    font-family: "Cenios";
+    src:  url('http://localhost/cenios/Cenios-Regular.otf');
+}
+@font-face {
+    font-family: "MyFont";
+    src:  url('http://localhost/azonix/Azonix.otf');
+}
+:root{
+    --chat-right: 30%
+}
+html{
+    font-family: "Inter";
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;   
+}
+nav{
+    position: fixed;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 3%;  
+    transition: .1s ease-out;
+    background-color: rgba(0,0,0,0);
+}
+nav>div{
+    margin: 0;
+    color: white;
+}
+.eco, .greeny{
+    letter-spacing: .2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.eco>.d1{color: rgba(255,255,255, 1);}
+.eco>.d2{color: rgba(255,255,255,.9);}
+.eco>.d3{color: rgba(255,255,255,.8);}
+.eco>.d4{color: rgba(255,255,255,.7);}
+.eco>.d5{color: rgba(255,255,255,.6);}
+.eco>.d6{color: rgba(255,255,255,.5);}
+.greeny{
+    border: 2px solid rgb(4, 159, 7);
+    color:rgb(4, 159, 7);   
+    padding: 1rem 1.5rem;
+    border-radius: 10rem;
+    letter-spacing: .1rem;
+    transition: .1s ease-out;
+}
+.greeny:hover{
+    border-color: #055c07;
+    background-color: #055c07;
+    color: white;
+}
+.body{
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    background-image: url('back.jpg');
+    width: 100%;
+    height: 100%;   
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: 80%;
+    justify-content: center;
+    align-items: end;
+}
+.cont{
+    color:white;
+    
+}
+.title{
+    font-family: "Title";
+    
+    align-items: center;
+    align-content: end;
+    display: flex;
+    line-height: 1;
+    letter-spacing: .2rem;
+}
+.title>span{
+    margin-bottom: -2rem;
+    line-height: 1;
+    font-size: 800%;
+    font-weight: 100;
+    align-items: center;
+    align-content: center;
+}
+.title>img{
+    align-self: center;
+    vertical-align: middle;
+    width:10rem;
+    filter:hue-rotate(240deg);
+}
+.subtitle{
+    font-size: 350%;
+    font-weight: 600;
+    text-align: justify;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    width: 80%;
+}
+.subtitle>mark{
+    color: white;
+    background: linear-gradient(to top, #055c07 50%, transparent 50%);
+    
+}
+.desc{
+    font-size: 200%;
+    font-weight: 500;
+    text-align: center;
+    text-transform:lowercase; 
+    margin-top: 2rem;
+    margin-top: 2rem;
+    line-height: 1;
+    text-align: justify;
+    font-family: "Cenios";
+}
+.section{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+.section:nth-child(even){
+    background-color: black;
+}
+.nav-scroll{
+    background-color: rgba(0,0,0,.9);
+}
+#chat{
+    position: fixed;
+    bottom: 0;
+    right: calc(0px - 2 * var(--chat-right));
+    transition: .2s ease-out;
+    width: var(--chat-right);
+    height: 94%;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 1rem;    
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding:1.5%;
+}
+#user-input{
+    background-color: rgba(0, 0, 0, 0.8); 
+    border: none;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 150%;
+}
+#chat-messages{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 75%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color:white;
+    font-size: 150%;
+}
+#chat-messages>div{
+    left: 0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10rem;
+    background-color: #055c07;
+    width: fit-content;
+    position: relative;
+}
+#chat-messages>.user{
+    right: 0;   
+    background-color: blueviolet;
+}
