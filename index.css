@@ -194,8 +194,10 @@ legend{
     border-radius: 50%;
     text-align: center;
     background-color: #b8ff892a;
+    background-color: black;
 }
 legend>img{
+    filter: invert(100%);
     width: 8vmin;
 }
 .nav-scroll{
