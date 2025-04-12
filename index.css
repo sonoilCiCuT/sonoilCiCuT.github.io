@@ -18,6 +18,7 @@ html{
     background-position: center;
     height: 100vh;
     margin: 0;
+    background-color: black;
 }
 body{
     padding: 0;
@@ -133,7 +134,7 @@ nav>div{
     font-family: "Cenios";
 }
 .section{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.97);
     font-size: 80%;
     width: 100%;
     height: max-content;
@@ -181,7 +182,7 @@ ul>fieldset{
     padding: 10%;
     border-radius: 1.5rem;
     height: max-content;
-    background-color: #b8ff892a;
+    background-color: #7272722a;
 }
 ul>fieldset>b{
     display: block;
