@@ -11,13 +11,31 @@
     <script type="module" src="huggingface.js"></script>
 </head>
 <body onscroll="nav(this, event)">
-    <div id="chat">
+    <!--div id="chat">
         <div id="chat-messages"></div>
         <input type="text" id="user-input" placeholder="Scrivi a Greeny"></input>
-    </div>
+    </div-->
     <nav>   
         <div class="eco">ECO <z class="d1">sos</z><z class="d2">te</z><z class="d3">ni</z><z class="d4">bi</z><z class="d5">li</z><z class="d6">tà</z></div>
-        <div class="greeny" onclick="toggleChat()">greeny</div>
+        <!--div class="greeny" onclick="toggleChat()">greeny</div-->
+        <script>
+            (function(){
+                if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+                    window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
+                    window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})
+                }
+                const onLoad=function(){
+                    const script=document.createElement("script");
+                    script.src="https://www.chatbase.co/embed.min.js";
+                    script.id="AbcUXl_aJfvZZ4i2uCD5E";
+                    script.domain="www.chatbase.co";
+                    document.body.appendChild(script)
+                };
+                if(document.readyState==="complete") onLoad()
+                else window.addEventListener("load",onLoad)
+                document.getElementById("chatbase-message-bubbles").style.position="block";
+            })();
+        </script>  
     </nav>
     <div class="body">
         <div class="cont">
@@ -30,9 +48,35 @@
         </div>
     </div>
     <div class="section">
-        <!--img src="https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg"-->
+        
+        <div class="cont desc">
+            In un mondo sempre più digitale, cresce la necessità di soluzioni tecnologiche sostenibili. I <b>software green</b> rispondono a questa sfida, riducendo l'impatto ambientale di applicazioni e sistemi informatici. Non si tratta solo di migliorare le tecnologie esistenti, ma di creare soluzioni innovative ed efficienti.
+            Adottare software green è una scelta strategica ed etica, che può portare vantaggi economici, operativi e d'immagine. Questo documento esplora le loro caratteristiche, i benefici e le migliori pratiche per uno sviluppo sostenibile.
+        </div>
+        <img src="https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg">
     </div>
-    <div class="section"></div>
+    <div class="section gridded">
+        <div class="cont desc">
+            <h3>Cosa sono?</h3>
+            I <b>software green</b> sono applicazioni e sistemi progettati, sviluppati e gestiti in modo da ridurre al minimo l'impatto ambientale. Questo approccio implica che, durante l'intero ciclo di vita del software vengano adottate pratiche sostenibili.
+
+            Le caratteristiche principali dei software green includono:
+            <ul>
+                <fieldset>
+                    <legend><img src="laptop-svgrepo-com.svg" alt=""></legend>
+                    <b>Ottimizzazione del consumo energetico</b> L'adozione di tecniche di coding efficienti e l'implementazione di algoritmi ottimizzati permettono di ridurre l'energia necessaria per eseguire le applicazioni. Questo non solo abbassa i costi operativi, ma contribuisce anche alla diminuzione dell'impronta ecologica complessiva.
+                </fieldset>                
+                <fieldset>
+                    <legend><img src="laptop-svgrepo-com.svg" alt=""></legend>
+                    <b>Minimizzazione dell'impronta di carbonio</b> Attraverso metodologie di "carbon-aware computing", i software possono essere progettati per funzionare in orari in cui l'energia proviene maggiormente da fonti rinnovabili, o per adattarsi alle variazioni nell'intensità di carbonio dell'elettricità disponibile. Questo approccio aiuta a ridurre le emissioni associate all'esecuzione del software.
+                </fieldset>
+                <fieldset>
+                    <legend><img src="laptop-svgrepo-com.svg" alt=""></legend>
+                    <b>Estensione della vita utile dell'hardware</b> Un design software efficiente può ridurre il carico sui dispositivi hardware, prolungandone la durata e riducendo la necessità di frequenti aggiornamenti. Questo contribuisce alla diminuzione dei rifiuti elettronici e promuove un ciclo di vita più sostenibile per i dispositivi tecnologici.
+                </fieldset>
+            </ul>
+        </div>
+    </div>
     <div class="section"></div>
     <div class="section"></div>
 </body>

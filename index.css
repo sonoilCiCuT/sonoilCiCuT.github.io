@@ -57,6 +57,8 @@ nav>div{
     border-radius: 10rem;
     letter-spacing: .1rem;
     transition: .1s ease-out;
+    user-select: none;
+    cursor: pointer;
 }
 .greeny:hover{
     border-color: #055c07;
@@ -132,11 +134,69 @@ nav>div{
 }
 .section{
     background-color: white;
+    font-size: 80%;
     width: 100%;
-    height: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 23% 40%;
+    justify-content: space-evenly;
+    grid-template-rows: 80%;
+    align-content: center;
+    align-items: center;
+}
+.section>.desc{
+    margin: 25% 0;
+    font-family: "Inter";
+    font-weight: 400;
+    line-height: 1.15;
+    text-transform: unset;
+    white-space: unset;
+}
+.desc>b{
+    text-decoration: underline;
 }
 .section:nth-child(even){
     background-color: black;
+    color: black;
+}
+.section:nth-child(odd)>.desc{
+    color: black;
+
+}
+.gridded{
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: max-content max-content;
+}
+.gridded>.desc{
+    margin: 2%;
+}
+ul{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    justify-content: space-around;
+}
+ul>fieldset{
+    border: 2px solid #000000;
+    padding: 10%;
+    border-radius: 1.5rem;
+    height: max-content;
+    background-color: #b8ff892a;
+}
+ul>fieldset>b{
+    display: block;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+legend{
+    border: 2px solid black;
+    padding: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #b8ff892a;
+}
+legend>img{
+    width: 8vmin;
 }
 .nav-scroll{
     background-color: rgba(0,0,0,.9);
