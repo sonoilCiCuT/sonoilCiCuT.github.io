@@ -8,16 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <script src="script.js"></script>
-    <script type="module" src="huggingface.js"></script>
 </head>
 <body onscroll="nav(this, event)">
-    <!--div id="chat">
-        <div id="chat-messages"></div>
-        <input type="text" id="user-input" placeholder="Scrivi a Greeny"></input>
-    </div-->
     <nav>   
         <div class="eco">ECO <z class="d1">sos</z><z class="d2">te</z><z class="d3">ni</z><z class="d4">bi</z><z class="d5">li</z><z class="d6">tà</z></div>
-        <!--div class="greeny" onclick="toggleChat()">greeny</div-->
+        <div class="anchors"><img src="burger-cheese-fastfood-food-svgrepo-com.svg" alt="">
+            <div>
+                <a href="#section1">Introduzione</a>
+                <a href="#section2">Cosa sono?</a>
+                <a href="#section3">A cosa servono?</a>
+                <a href="#section4">Il green coding</a>
+                <a href="#section5">Green Software Engineering</a>
+                <a href="#section6">Altre opzioni di progettazioni e codifica</a>
+                <a href="#section7">Data Center Green</a>
+                <a href="#section8">Pratiche di Sostenibilità nei Data Center</a>
+                <a href="#section9">Calcolo delle emissioni di un software</a>
+                <a href="#section10">Conclusioni</a>
+            </div>
+        </div>
         <script>
             (function(){
                 if(!window.chatbase||window.chatbase("getState")!=="initialized"){
@@ -47,7 +55,7 @@
             </p>
         </div>
     </div>
-    <div class="section">
+    <div class="section" id="section1">
         
         <div class="cont desc">
             In un mondo sempre più digitale, cresce la necessità di soluzioni tecnologiche sostenibili. I <b>software green</b> rispondono a questa sfida, riducendo l'impatto ambientale di applicazioni e sistemi informatici. Non si tratta solo di migliorare le tecnologie esistenti, ma di creare soluzioni innovative ed efficienti.
@@ -55,7 +63,7 @@
         </div>
         <img src="https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg">
     </div>
-    <div class="section gridded">
+    <div class="section gridded" id="section2">
         <div class="cont desc">
             <h3>Cosa sono?</h3>
             I <b>software green</b> sono applicazioni e sistemi progettati, sviluppati e gestiti in modo da ridurre al minimo l'impatto ambientale. Questo approccio implica che, durante l'intero ciclo di vita del software vengano adottate pratiche sostenibili.
@@ -63,21 +71,199 @@
             Le caratteristiche principali dei software green includono:
             <ul>
                 <fieldset>
-                    <legend><img src="lightning-svgrepo-com.svg" alt=""></legend>
+                    <legend><img src="https://www.svgrepo.com/show/461841/lightning.svg" alt=""></legend>
                     <b>Ottimizzazione del consumo energetico</b> L'adozione di tecniche di coding efficienti e l'implementazione di algoritmi ottimizzati permettono di ridurre l'energia necessaria per eseguire le applicazioni. Questo non solo abbassa i costi operativi, ma contribuisce anche alla diminuzione dell'impronta ecologica complessiva.
                 </fieldset>                
                 <fieldset>
-                    <legend><img src="leaf-2-svgrepo-com.svg" alt=""></legend>
+                    <legend><img src="https://www.svgrepo.com/show/487509/leaf-2.svg" alt=""></legend>
                     <b>Minimizzazione dell'impronta di carbonio</b> Attraverso metodologie di "carbon-aware computing", i software possono essere progettati per funzionare in orari in cui l'energia proviene maggiormente da fonti rinnovabili, o per adattarsi alle variazioni nell'intensità di carbonio dell'elettricità disponibile. Questo approccio aiuta a ridurre le emissioni associate all'esecuzione del software.
                 </fieldset>
                 <fieldset>
-                    <legend><img src="laptop-alt-1-svgrepo-com.svg" alt=""></legend>
+                    <legend><img src="https://www.svgrepo.com/show/533082/laptop-alt-1.svg" alt=""></legend>
                     <b>Estensione della vita utile dell'hardware</b> Un design software efficiente può ridurre il carico sui dispositivi hardware, prolungandone la durata e riducendo la necessità di frequenti aggiornamenti. Questo contribuisce alla diminuzione dei rifiuti elettronici e promuove un ciclo di vita più sostenibile per i dispositivi tecnologici.
                 </fieldset>
             </ul>
         </div>
     </div>
-    <div class="section"></div>
-    <div class="section"></div>
+    <div class="section gridded" id="section3">
+        <div class="cont desc">
+            <h3>A cosa servono?</h3>
+            I software green offrono una vasta gamma di benefici, sia per le organizzazioni che per gli utenti finali.
+            <ul>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/449199/resources.svg" alt=""></legend>
+                    <b>Ottimizzazione delle risorse IT</b>L'adozione di software efficienti consente una gestione più efficace dei data center e delle infrastrutture IT, riducendo lo spreco energetico e migliorando l'utilizzo delle risorse hardware. Questo porta a una maggiore efficienza operativa e a una riduzione dei costi associati alla gestione e manutenzione dell'infrastruttura tecnologica.
+                </fieldset>                
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/427633/company-cooperation-group.svg" alt=""></legend>
+                    <b>Miglioramento dell'immagine aziendale</b>L'adozione di pratiche di sviluppo software sostenibili rafforza la reputazione di un'azienda e può rappresentare un vantaggio competitivo rispetto ad altre aziende, dimostrando un impegno concreto verso la responsabilità sociale e ambientale. Questo può influenzare positivamente la percezione del brand da parte dei clienti e degli investitori.
+                </fieldset>
+            </ul>
+        </div>
+
+    </div>
+    <div class="section gridded" id="section4">
+        <div class="cont desc">
+            <h3>Il green coding</h3>
+            <ul>
+                <img src="coding-vs-programming-2.png" alt="">
+                <div>
+                    Questo approccio si concentra sulla scrittura di codice ottimizzato ed efficiente, che minimizzi l'uso delle risorse computazionali e riduca il consumo energetico. L'idea centrale è quella di sviluppare applicazioni in modo da sfruttare al meglio le risorse disponibili, evitando sprechi. Le pratiche fondamentali di green coding includono l'ottimizzazione degli algoritmi, la rimozione di codice superfluo, e l'adozione di soluzioni che permettano di eseguire operazioni con il minor numero possibile di risorse hardware e software. Inoltre, si punta a migliorare l'efficienza energetica durante l'esecuzione del programma, riducendo così l'impronta ecologica delle applicazioni stesse. Studi recenti hanno evidenziato che anche piccole modifiche nel codice, come la semplificazione degli algoritmi o l'eliminazione di cicli inutili, possono generare significative riduzioni nel consumo energetico delle applicazioni, con impatti positivi sia sull'ambiente che sui costi operativi.
+                </div>  
+            </ul>
+        </div>
+    </div>
+    <div class="section gridded" id="section5">
+        <div class="cont desc">
+            <h3>Green Software Engineering</h3>
+            La Green Software Engineering è una disciplina emergente che combina i principi dell'ingegneria del software tradizionale con le esigenze della sostenibilità ambientale. Essa coinvolge competenze in climatologia, gestione dell'energia, progettazione di hardware e gestione dei data center, con l'obiettivo di sviluppare applicazioni software che siano sia efficienti che ecologicamente responsabili.
+            <ul class="section5">
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/121367/co2.svg" alt=""></legend>
+                    <b>Carbonio</b> Questo principio sottolinea l'importanza di ridurre le emissioni di gas serra associate all'esecuzione del software. L'obiettivo è scrivere codice che massimizzi l'utilità riducendo al minimo le emissioni per unità di lavoro svolto.
+                </fieldset>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/159761/co2.svg" alt=""></legend>
+                    <b>Intensità di Carbonio</b>Questo principio riguarda l'adattamento del software alle variazioni nell'intensità di carbonio dell'elettricità disponibile, ottimizzando le operazioni in base alla "pulizia" dell'energia utilizzata. 
+                </fieldset>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/326665/hardware-chip-outline.svg" alt=""></legend>
+                    <b>Carbonio Incorporato</b>Si riferisce alle emissioni legate alla produzione e allo smaltimento dell'hardware. Adottare pratiche che estendano la vita utile dei dispositivi e riducano la necessità di aggiornamenti frequenti può contribuire a diminuire l'impronta di carbonio incorporata. 
+                </fieldset>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/438228/content-bulb-electricity-idea-lamp-light-lightbulb-icon.svg" alt=""></legend>
+                    <b>Elettricità</b>Riconoscendo che l'energia elettrica è spesso generata da fonti fossili, questo principio enfatizza la necessità di sviluppare applicazioni che consumino meno energia, è infatti consigliabile rimuovere le funzionalità non utilizzate e i loop inefficienti, contribuendo così a ridurre le emissioni indirette associate all'uso del software.
+                </fieldset>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/456209/electricity-cable.svg" alt=""></legend>
+                    <b>Proporzionalità Energetica</b>Questo principio enfatizza l'importanza di allineare il consumo energetico del software con il carico di lavoro effettivo, garantendo che le risorse siano utilizzate in modo efficiente e scalate in base alle esigenze.
+                </fieldset>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/532872/network-wired.svg" alt=""></legend>
+                    <b>Rete</b>Riconoscendo che la trasmissione di dati attraverso la rete comporta consumi energetici e emissioni, questo principio suggerisce di minimizzare il traffico dati e ottimizzare le comunicazioni per ridurre l'impatto ambientale. 
+                </fieldset>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/358008/microscope.svg" alt=""></legend>
+                    <b>Misurazione e Ottimizzazione</b>L'implementazione di pratiche e strumenti di monitoraggio continuo delle emissioni e del consumo energetico consente di identificare aree di miglioramento e implementare ottimizzazioni mirate costanti al software per ridurre l'impatto ambientale. 
+                </fieldset>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/532097/clock-check.svg" alt=""></legend>
+                    <b>Programmazione consapevole</b>Coinvolgere gli utenti nella consapevolezza dell'impatto ambientale del software può portare a scelte più sostenibili. Si suddivide in: 
+                    <ul>
+                        <fieldset>
+                            spostamento della domanda → esecuzione del software in orari in cui l'energia proviene maggiormente da fonti rinnovabili o quando l'intensità di carbonio dell'elettricità è minore.
+                        </fieldset>
+                        <fieldset>
+                            modellamento della domanda → adozione di modalità a basso consumo energetico (eco-friendly).
+                        </fieldset>
+                    </ul>
+                </fieldset>
+            </ul>
+        </div>
+    </div>
+    <div class="section gridded" id="section6">
+        <div class="cont desc">
+            <h3>Altre opzioni di progettazioni e codifica</h3>
+            <ul>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/486251/data-developmentscript-development.svg" alt=""></legend>
+                    <b>Ridurre l'utilizzo dei dati</b>Implementare politiche di cache efficienti, minimizzare lo scambio di dati e gestire il ciclo di vita dei dati archiviati. Ciò include la compressione, l'aggregazione dei dati e l'uso di formati più leggeri, come immagini di dimensioni ottimizzate.
+                </fieldset>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/479432/magnifying-glass-for-search-3.svg" alt=""></legend>
+                    <b>Limitare l’accuratezza computazionale</b>Adeguare l'accuratezza computazionale al livello necessario per soddisfare le esigenze operative. Ad esempio, ridurre la precisione della geolocalizzazione quando non è richiesta una risoluzione elevata.
+                </fieldset>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/30521/java.svg" alt=""></legend>
+                    <b>Scelta del linguaggio di programmazione</b>La scelta del linguaggio di programmazione può influenzare significativamente l'efficienza energetica del software. Studi hanno esaminato vari linguaggi per valutare il consumo di energia, la velocità e l’utilizzo della memoria. Sebbene nessun linguaggio si riveli superiore in modo assoluto, è fondamentale considerare vari fattori, come le specifiche esigenze dell'applicazione e l’efficienza energetica.
+                </fieldset>
+            </ul>
+        </div>
+    </div>
+    <div class="section gridded" id="section7">
+        <div class="cont desc">
+            <h3>Data Center Green</h3>
+            <ul class="section7">
+                <img src="https://www.ellediufficio.it/wp-content/uploads/2021/08/Cloud-Computing-significato-tipologie-e-vantaggi.jpg" alt="">
+                <div>
+                    Il cloud è diventato l'ambiente prediletto per le applicazioni moderne, in quanto offre numerose opportunità di ottimizzazione energetica e riduzione degli sprechi, e se queste fossero sviluppate tenendo conto della sostenibilità, l’impatto positivo sul risparmio energetico sarebbe notevole. Questo risultato può essere ottenuto grazie alla distribuzione ottimizzata dei server e all’utilizzo di software green.
+                </div>  
+                <div>
+                    Il cloud computing favorisce la riduzione delle emissioni di CO2 grazie all’efficienza derivante dall'aggregazione delle risorse di calcolo. Il software gioca un ruolo cruciale in questo processo, permettendo di ottimizzare l'uso delle risorse. Sul fronte on-premise, le applicazioni possono ridurre il consumo energetico tramite tecniche come la compressione dei dati, l’edge computing per gestire compiti localmente, o la distribuzione dei workload tra più processori.
+                </div>
+                <img src="https://media.istockphoto.com/id/1278971203/photo/virtual-data-transmission-futuristic-computer-technology-cpu-processor-on-database-circuit.jpg?s=612x612&w=0&k=20&c=m_HUpdEUVgzLisd_ld3wLO0SsmiU-oAg4NbI0UakN-A=" alt="">
+                <img src="https://t3.ftcdn.net/jpg/01/23/12/38/360_F_123123866_EGxIsP6jRf1hLP56OHDUWHHyJF2Kkhfp.jpg" alt="">
+                <div>
+                    Inoltre, l'adozione di architetture avanzate e più green, come il serverless computing e i container, consente un controllo più preciso sulla capacità di calcolo e sul consumo energetico. Questi approcci favoriscono la scalabilità dinamica, ottimizzando l’utilizzo delle risorse in base alle necessità, riducendo così gli sprechi energetici ed economici.
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="section gridded" id="section8">
+        <div class="cont desc">
+            <h3>Pratiche di Sostenibilità nei Data Center</h3>
+            <ul class="section8">
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/532047/cloud-sun.svg" alt=""></legend>
+                    <b>Cloud Computing e Green Hosting</b>
+                    <ul>
+                        <fieldset>
+                            <b>Provider green</b>Utilizzo di servizi cloud alimentati da energie rinnovabili, come Google Cloud e AWS, che adottano pratiche di sostenibilità.
+                        </fieldset>
+                        <fieldset>
+                            <b>Scalabilità dinamica</b>Permette di ridurre i consumi adattando le risorse in base alla domanda effettiva, evitando sprechi energetici.
+                        </fieldset>
+                        <fieldset>
+                            <b>Hardware ecologico</b>Scegliere hardware progettato per l’efficienza energetica, con un minore impatto ambientale.
+                        </fieldset>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/479959/energy-saving-light-bulb.svg" alt=""></legend>
+                    <b>Edge Computing</b>I dati vengono elaborati direttamente sul dispositivo, riducendo la quantità di informazioni inviate al cloud e riducendo latenza e consumi energetici.
+                </fieldset>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/533146/server.svg" alt=""></legend>
+                    <b>Decentralizzazione</b>Utilizzare architetture decentralizzate, in cui i carichi di lavoro vengono distribuiti tra diverse unità, ottimizzando le risorse e riducendo il carico su singoli data center.
+                </fieldset>
+                <fieldset>
+                    <legend><img src="https://www.svgrepo.com/show/532807/file-xmark-alt.svg" alt=""></legend>
+                    <b>Data Minimization</b>Minimizzare i dati trattati, eliminando file inutili e riducendo la quantità di informazioni gestite, con un impatto positivo sul consumo energetico.
+                </fieldset>
+            </ul>
+        </div>
+    </div>
+    <div class="section gridded" id="section9">
+        <div class="cont desc">
+            <h3>Calcolo delle emissioni di un software</h3>
+            <ul class="section9">
+                <div>L'impatto ambientale di un green software viene stabilito principalmente tramite il calcolo delle <b>emissioni di gas serra (GHG)</b>. Il <b>Protocollo GHG</b>, adottato dal 92% delle aziende Fortune 500, suddivide le emissioni in tre ambiti:
+                    <ol>
+                        <li>Emissioni dirette aziendali.</li>
+                        <li>Emissioni indirette legate all'energia acquistata.</li>
+                        <li>Emissioni lungo la catena di fornitura, inclusi i data center e l'infrastruttura cloud.</li>
+                    </ol>
+                </div>
+                <img src="https://www.sandpaperme.com/wp-content/uploads/2022/07/4-Practical-Environmental-Sustainability-Activities.jpg" alt="">
+                <img src="https://www.kainos.com/globalassets/images/2_size-2-hero-child/level-1-end-user/green-software-illustration-v1-.png" alt="">
+                <div>
+                    Un altro strumento utile è il Software Carbon Intensity (SCI), che misura le emissioni di carbonio specifiche del software. La SCI aiuta a monitorare e ridurre l'impronta di carbonio del software, promuovendo scelte più sostenibili durante lo sviluppo.
+                </div>
+                <div>
+                    Il calcolo dell’impronta di carbonio del software può essere complesso, specialmente per software open-source, dove i dati sul consumo energetico e le emissioni sono difficili da tracciare. La maggior parte delle emissioni di carbonio non è facilmente attribuibile, poiché molte aziende utilizzano software open-source, il che rende difficile monitorare e ridurre le emissioni in modo centralizzato.
+                </div>
+                <img src="https://energifera.com/wp-content/uploads/2023/07/CARBON-FOOTPRINT-SITO.png" alt="">
+            </ul>
+        </div>
+    </div>
+    <div class="section gridded" id="section10">
+        <div class="cont desc">
+            <h3>Conclusioni</h3>
+            <ul>
+                <img src="https://media.ippo-engineering.eu/ippo-engineering.eu/wp-content/uploads/2023/07/Green-software-1-sito-IT-1024x556.jpg" alt="">
+                <div>I software green rappresentano un passo fondamentale verso un futuro tecnologico più sostenibile. Adottando pratiche di sviluppo responsabili e ottimizzando le risorse, possiamo ridurre l'impatto ambientale delle nostre applicazioni e contribuire a un mondo più verde. La transizione verso software green non è solo una scelta etica, ma anche una strategia vincente per le aziende che desiderano rimanere competitive in un mercato sempre più attento alla sostenibilità.</div>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

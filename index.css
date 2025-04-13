@@ -70,7 +70,7 @@ nav>div{
 }
 .body{
     background: linear-gradient(to right, #00c6ff, #0072ff);
-    background-image: url('back.jpg');
+    background-image: url('https://accelerationrobotics.com/img/robotcore-fondo-escena.jpg');
     width: 100%;
     height: 100%;   
     display: grid;
@@ -139,7 +139,7 @@ nav>div{
     font-size: 2vw;
 }
 .section{
-    background-color: rgba(255, 255, 255, 0.97);
+    background-color: rgb(247, 247, 247);
     font-size: 80%;
     width: 100%;
     height: max-content;
@@ -170,8 +170,17 @@ nav>div{
 }
 .section:nth-child(odd)>.desc{
     color: black;
-
 }
+.section:nth-child(odd)>.cont>ul>fieldset{
+    border-color: rgb(247, 247, 247);
+}
+.section:nth-child(odd)>.cont>ul>fieldset>legend>img{
+    filter:brightness(0);
+}
+.section:nth-child(odd)>.cont>ul>fieldset>legend{
+    background-color: rgb(247, 247, 247);
+    border-color: transparent;
+}   
 .gridded{
     display: grid;
     grid-template-columns: 80%;
@@ -180,11 +189,68 @@ nav>div{
 .gridded>.desc{
     margin: 2%;
 }
-ul{
+#section2>.cont>ul{
     display: grid;
-    grid-template-columns: 25% 25% 25%;
+    grid-template-columns: 30% 30% 30%;
     justify-content: space-around;
     padding: 0%
+}
+#section3>.cont>ul,#section4>.cont>ul,#section9>.cont>ul,#section10>.cont>ul{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-around;
+    padding: 0%
+}
+#section9>.cont>ul>div,#section10>.cont>ul>div{
+    width: 80%;
+    justify-self: center;
+}
+ul{
+    row-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+}
+ul.section5{
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: max-content max-content;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ul.section5>fieldset:last-child{
+    grid-column: span 2;    
+    padding: 5%;
+}
+ul.section5>fieldset>ul{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ul>fieldset>ul>fieldset{
+    background-color: transparent;
+    border-color: transparent;
+}
+ul.section7{
+    grid-template-columns: 40% 40%;
+    grid-template-rows: max-content;
+    row-gap: 2rem;
+    justify-content: space-evenly;  
+    align-items: center;
+}
+ul.section7>div{
+    width: 80%;
+    justify-self: center;
+}
+ul.section8>fieldset:first-child{
+    grid-column: span 3;
+    padding: 3.3333%;
+}
+ul>img{
+    width: 100%;
 }
 ul>fieldset{
     border: 2px solid #000000;
@@ -258,6 +324,41 @@ legend>img{
 #chat-messages>.user{
     right: 0;   
     background-color: blueviolet;
+    justify-content: center;
+}
+.anchors>div{
+    transform: scaleY(0);
+    position: absolute;
+    text-align: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    right: 2%;
+    transition: .2s ease-out;
+    transform-origin: 0 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid black;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.anchors>div>a{
+    font-size: 120%;
+    color: rgb(247, 247, 247);
+    text-decoration: none;
+}
+.anchors>div>a:hover{
+    color: rgb(4, 159, 7);
+}
+.anchors>img{
+    width: 5vmin;
+    margin: 0 auto;
+    filter: invert(100%);
+}
+.anchors:hover>div{
+    transform: scaleY(1);
+}
+#section1>.cont>ul,#section2>.cont>ul,#section3>.cont>ul,#section4>.cont>ul,#section5>.cont>ul,#section6>.cont>ul,#section7>.cont>ul,#section8>.cont>ul,#section9>.cont>ul,#section10>.cont>ul{
+    padding: 0;
 }
 @media (max-width: 973px) {
     .body{
@@ -294,6 +395,23 @@ legend>img{
         padding: 2% .5%;
         width: 99%;
     }
+    .anchors>div{
+        right: 0;
+        grid-template-columns: 1fr;
+        background-color: rgba(0,0,0,1);
+    }
+    #section1>.cont>ul,#section2>.cont>ul,#section3>.cont>ul,#section4>.cont>ul,#section5>.cont>ul,#section6>.cont>ul,#section7>.cont>ul,#section8>.cont>ul,#section9>.cont>ul,#section10>.cont>ul{
+        grid-template-columns: 100%;
+        grid-template-rows: max-content;
+        grid-template-columns: 1fr;
+    }
+    #section1>.cont>ul>fieldset,#section2>.cont>ul>fieldset,#section3>.cont>ul>fieldset,#section4>.cont>ul>fieldset,#section5>.cont>ul>fieldset,#section6>.cont>ul>fieldset,#section7>.cont>ul>fieldset,#section8>.cont>ul>fieldset,#section9>.cont>ul>fieldset,#section10>.cont>ul>fieldset{
+        grid-column: span 1;
+    }
+    #section1>.cont>ul>fieldset>ul,#section2>.cont>ul>fieldset>ul,#section3>.cont>ul>fieldset>ul,#section4>.cont>ul>fieldset>ul,#section5>.cont>ul>fieldset>ul,#section6>.cont>ul>fieldset>ul,#section7>.cont>ul>fieldset>ul,#section8>.cont>ul>fieldset>ul,#section9>.cont>ul>fieldset>ul,#section10>.cont>ul>fieldset>ul{
+        grid-template-rows: max-content;
+        grid-template-columns: 1fr;
+    }
 }
 @media (max-width: 1300px) {
     .section{
@@ -311,6 +429,7 @@ legend>img{
     .cont>ul{
         grid-template-columns: 100%;
         grid-template-rows: max-content;;
+        grid-template-columns: 1fr;
     }
     ul>fieldset{
         margin: 0;
