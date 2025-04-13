@@ -17,8 +17,10 @@ html{
     background-size: cover;
     background-position: center;
     height: 100vh;
+    width: 100%; 
     margin: 0;
     background-color: black;
+    overflow-x: hidden;
 }
 body{
     padding: 0;
@@ -96,7 +98,7 @@ nav>div{
     white-space: nowrap;
     margin-bottom: -2rem;
     line-height: 1;
-    font-size: 800%;
+    font-size: 7vw;
     font-weight: 100;
     align-items: center;
     align-content: center;
@@ -105,7 +107,7 @@ nav>div{
 .title>img{
     align-self: center;
     vertical-align: middle;
-    width:10rem;
+    width:9vw;
     filter:hue-rotate(240deg);
 }
 .subtitle{
@@ -133,6 +135,9 @@ nav>div{
     text-align: justify;
     font-family: "Cenios";
 }
+.cont>.desc{
+    font-size: 2vw;
+}
 .section{
     background-color: rgba(255, 255, 255, 0.97);
     font-size: 80%;
@@ -152,6 +157,9 @@ nav>div{
     line-height: 1.15;
     text-transform: unset;
     white-space: unset;
+}
+.section>img{
+    width: 100%;
 }
 .desc>b{
     text-decoration: underline;
@@ -176,6 +184,7 @@ ul{
     display: grid;
     grid-template-columns: 25% 25% 25%;
     justify-content: space-around;
+    padding: 0%
 }
 ul>fieldset{
     border: 2px solid #000000;
@@ -249,4 +258,62 @@ legend>img{
 #chat-messages>.user{
     right: 0;   
     background-color: blueviolet;
+}
+@media (max-width: 973px) {
+    .body{
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+        justify-content: center;
+        align-items: center;text-align: center;
+    }
+    .title>span{
+        display: none;
+    }
+    .title{
+        justify-content: center;    
+    }
+    .title>img{
+        width: 45vw;
+    }
+    .body>.cont{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .cont>.desc{
+        width: 90%;
+        font-size: 4vw;
+        white-space: normal;
+        text-align: center;
+        justify-self: center;
+    }
+    nav{
+        padding: 2% .5%;
+        width: 99%;
+    }
+}
+@media (max-width: 1300px) {
+    .section{
+        grid-template-columns: 80%;
+        grid-template-rows: max-content;
+        align-items: center;
+        justify-content:center;
+    }
+    .section>.desc{
+        margin: 3rem 0;
+    }
+    .section>*{
+        margin: 3rem 0;
+    }
+    .cont>ul{
+        grid-template-columns: 100%;
+        grid-template-rows: max-content;;
+    }
+    ul>fieldset{
+        margin: 0;
+        padding: 5%;
+    }
 }
