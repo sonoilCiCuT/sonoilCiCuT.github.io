@@ -257,6 +257,7 @@ ul>fieldset{
     padding: 10%;
     border-radius: 1.5rem;
     height: max-content;
+    text-align: left;
     background-color: #7272722a;
 }
 ul>fieldset>b{
