@@ -364,6 +364,14 @@ legend>img{
 .riferimenti{
     grid-template-columns: 20% 20% 20%;
     justify-content: space-evenly;
+    transition: .15s ease-out;
+}
+.riferimenti>fieldset{
+    transition: .15s ease-out;
+}
+.riferimenti>fieldset:hover{
+    background-color: rgb(210, 210, 210);
+    transform: scale(1.1);
 }
 .riferimenti>fieldset>a{
     text-align: center;
