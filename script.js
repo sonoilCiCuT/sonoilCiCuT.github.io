@@ -16,3 +16,17 @@ function toggleChat(){
     }
     document.getElementById("user-input").focus();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        // Toggle 'visible' based on whether the element is in view
+        entry.target.classList.toggle("visible", entry.isIntersecting);
+      });
+    }, { threshold: 0.1 }); // Adjust threshold as needed
+  
+    // Observe all target elements
+    document.querySelectorAll(".animate-on-scroll").forEach((element) => {
+      observer.observe(element);
+    });
+  });

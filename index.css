@@ -29,6 +29,7 @@ body{
     height: 100%;   
 }
 nav{
+    z-index: 100;
     position: fixed;
     width: 94%;
     display: flex;
@@ -213,6 +214,7 @@ ul{
     display: grid;
     grid-template-columns: 30% 30% 30%;
     justify-content: space-around;
+    padding: 0%;
 }
 ul.section5{
     grid-template-columns: 30% 30% 30%;
@@ -384,7 +386,22 @@ legend>img{
     border-radius: 50%;
     border: 2px solid rgba(0, 0, 0, 0.4); 
 }
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(100px); /* Starts 50px below its normal position */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0); /* Moves to its normal position */
+  }
 @media (max-width: 973px) {
+    
+    ul>div{
+        width: 100%;
+    }
     .body{
         grid-template-columns: 100%;
         grid-template-rows: 100%;
@@ -435,6 +452,13 @@ legend>img{
     #section1>.cont>ul>fieldset>ul,#section2>.cont>ul>fieldset>ul,#section3>.cont>ul>fieldset>ul,#section4>.cont>ul>fieldset>ul,#section5>.cont>ul>fieldset>ul,#section6>.cont>ul>fieldset>ul,#section7>.cont>ul>fieldset>ul,#section8>.cont>ul>fieldset>ul,#section9>.cont>ul>fieldset>ul,#section10>.cont>ul>fieldset>ul{
         grid-template-rows: max-content;
         grid-template-columns: 1fr;
+    }
+    #section7>.cont>ul>fieldset>div,#section9>.cont>ul>fieldset>div,#section10>.cont>ul>fieldset>div{
+        width: 100%;
+        justify-self: center;
+    }
+    .riferimenti>fieldset>a{
+        font-size: 4vh;
     }
 }
 @media (max-width: 1300px) {
