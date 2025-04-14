@@ -361,6 +361,21 @@ legend>img{
 #section1>.cont>ul,#section2>.cont>ul,#section3>.cont>ul,#section4>.cont>ul,#section5>.cont>ul,#section6>.cont>ul,#section7>.cont>ul,#section8>.cont>ul,#section9>.cont>ul,#section10>.cont>ul{
     padding: 0;
 }
+.riferimenti{
+    grid-template-columns: 20% 20% 20%;
+    justify-content: space-evenly;
+}
+.riferimenti>fieldset>a{
+    text-align: center;
+    text-decoration: none;
+    color:black;
+    font-size: 2vw;
+}
+.riferimenti>fieldset>a>img{
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.4); 
+}
 @media (max-width: 973px) {
     .body{
         grid-template-columns: 100%;
