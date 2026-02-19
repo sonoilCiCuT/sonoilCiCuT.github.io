@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
         <style>
             :root{
                 --back-color: rgb(235, 235, 235);
@@ -34,7 +36,7 @@
                 /*grid-template-columns: 30% 30% 30%;
                 grid-template-rows: repeat(5,40vh);*/
                 grid-template-columns: 45% 45%;
-                grid-template-rows: repeat(7,60vh);
+                grid-template-rows: repeat(8,60vh);
                 justify-content: center;
                 column-gap: 2%;
                 row-gap: 6vh;
@@ -114,29 +116,63 @@
                     color:var(--back-color);
                     text-shadow: 0px 0px 10px var(--back-color);
                 }
+                #map{ 
+                    box-shadow:  0 0 10px black;
+                    justify-self: center;
+                    height: 100%; 
+                    width: 66%;
+                    grid-column: span 2;
+                }
                 @media (max-width: 1180px) {
                     #title{
                         font-size: 12vw;
                     }
-
+                    
                     .cont{
                         grid-template-columns: 90%;
-                        grid-template-rows: repeat(14,70vh);
+                        grid-template-rows: repeat(15,70vh);
                     }
                     .element{
                         background-position: center;
                     }
+                    #map{
+                        grid-column: span 1;
+                        width: 100%;
+                    }
                 }
-                </style>
+            </style>
+            <script> function init(){
+                    var map = L.map("map").setView([41.397, 2.164],13)
+                    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+                    arr = document.getElementsByClassName("place")
+                    j = 0;
+                    myicon = L.icon({
+                        iconUrl: "https://www.svgrepo.com/show/269889/badges-star.svg",
+                        iconSize: [38, 95],
+                        iconAnchor: [22, 94],
+                        popupAnchor: [-3, -76]
+                    })
+                    Array.from(arr).forEach(function(i){
+                        name = i.parentNode.parentNode.getElementsByTagName("span")[0].innerHTML
+                        id = "d"+(j++);
+                        i.parentNode.parentNode.id = id;
+                        i = i.href.split("41.")
+                        i = i[i.length - 1]
+                        //console.log("41." + i.split("!4d")[0] + " " + i.split("!4d")[1].substring(0,6))
+                        L.marker(["41." + i.split("!4d")[0], i.split("!4d")[1].substring(0,6)],{icon: myicon}).addTo(map).bindPopup("<a href='#"+id+"'>"+name+"</a>")
+                        //!8m2!3d !16zL20vM
+                    })
+                } 
+            </script>
     </head>
-    <body>
+    <body onload="init()">
         <p id="title">Barcellona</p>
         <div class="cont">
             <div class="element" style="background-image: url('https://www.barcellona.org/wp-content/uploads/sites/14/barcellona-sagrada-familia-lontano-hd.jpg');">
                 <div class="title">
                     <span>Sagrada Familia</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/Sagrada+Fam%C3%ADlia/@41.3951558,2.1625778,15z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a2dcd83dfb93:0x9bd8aac21bc3c950!8m2!3d41.4036299!4d2.1743558!16zL20vMGc2bjM?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/Sagrada+Fam%C3%ADlia/@41.3951558,2.1625778,15z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a2dcd83dfb93:0x9bd8aac21bc3c950!8m2!3d41.4036299!4d2.1743558!16zL20vMGc2bjM?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                         <a href="https://tickets.sagradafamilia.org/en"><img class="exlink" src="https://www.svgrepo.com/show/529545/dollar.svg"></a>
                     </span>
                 </div>
@@ -145,7 +181,7 @@
                 <div class="title">
                     <span>Catedral de Barcelona</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/Cattedrale+di+Barcellona/@41.3782841,2.1712467,15z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a2f996716c83:0x16f6112475e15883!8m2!3d41.383962!4d2.1761991!16zL20vMHZseWI?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/Cattedrale+di+Barcellona/@41.3782841,2.1712467,15z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a2f996716c83:0x16f6112475e15883!8m2!3d41.383962!4d2.1761991!16zL20vMHZseWI?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                         <a href="https://catedralbcn.org/en/"><img class="exlink" src="https://www.svgrepo.com/show/529545/dollar.svg"></a>
                     </span>
                 </div>
@@ -154,7 +190,7 @@
                 <div class="title">
                     <span>Tibidabo</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/Tibidabo/@41.4044069,2.1138694,13z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a49789cff3db45:0xdb92ebc64b4e2a63!8m2!3d41.4225!4d2.118611!16zL20vMGtjNjI?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/Tibidabo/@41.4044069,2.1138694,13z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a49789cff3db45:0xdb92ebc64b4e2a63!8m2!3d41.4225!4d2.118611!16zL20vMGtjNjI?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                         <a href="https://irbarcelona.it/chiese-barcellona/tempio-espiatorio-del-sacro-cuore-di-gesu/"><img class="exlink" src="https://www.svgrepo.com/show/529545/dollar.svg"></a>
                     </span>
                 </div>
@@ -163,7 +199,7 @@
                 <div class="title">
                     <span>Casa Batllo'</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/Casa+Batll%C3%B3/@41.4044069,2.1138694,13z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a2ed494b4161:0x40d2782f9e2e4e0f!8m2!3d41.3917!4d2.164918!16zL20vMG52OQ?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/Casa+Batll%C3%B3/@41.4044069,2.1138694,13z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a2ed494b4161:0x40d2782f9e2e4e0f!8m2!3d41.3917!4d2.164918!16zL20vMG52OQ?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                         <a href="https://www.casabatllo.es/it/"><img class="exlink" src="https://www.svgrepo.com/show/529545/dollar.svg"></a>
                     </span>
                 </div>
@@ -172,7 +208,7 @@
                 <div class="title">
                     <span>Casa Mila'</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/La+Pedrera/@41.4044069,2.1138694,13z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a293998ae1d5:0xc49fa3624f371e6a!8m2!3d41.3952155!4d2.1619024!16zL20vMG53OA?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/La+Pedrera/@41.4044069,2.1138694,13z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a293998ae1d5:0xc49fa3624f371e6a!8m2!3d41.3952155!4d2.1619024!16zL20vMG53OA?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                         <a href="https://www.lapedrera.com/it/"><img class="exlink" src="https://www.svgrepo.com/show/529545/dollar.svg"></a>
                     </span>
                 </div>
@@ -181,7 +217,7 @@
                 <div class="title">
                     <span>Casa Vicens</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/Casa+Vicens/@41.4034362,2.1506935,13z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a2a2323480a1:0xcef2071fd9460247!8m2!3d41.4034978!4d2.1506455!16zL20vMDQyMm1k?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/Casa+Vicens/@41.4034362,2.1506935,13z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a2a2323480a1:0xcef2071fd9460247!8m2!3d41.4034978!4d2.1506455!16zL20vMDQyMm1k?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                         <a href="https://fareharbor.com/embeds/book/casavicens/items/511679/calendar/2026/02/?language=it-IT&currency=EUR&product_id=ri250661&surface=maps&funnel=nav&google-ads-click-source=&asn=googleeuro&full-items=yes&back=https://casavicens.org/&branding=yes"><img class="exlink" src="https://www.svgrepo.com/show/529545/dollar.svg"></a>
                     </span>
                 </div>
@@ -190,7 +226,7 @@
                 <div class="title">
                     <span>Montjuic</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/Montju%C3%AFc,+Sants-Montju%C3%AFc,+Barcellona,+Spagna/@41.3663448,2.1567675,15z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a26c577b0a6f:0x1c43588300ab7610!8m2!3d41.3663448!4d2.1567675!16s%2Fg%2F11y9tyc97?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/Montju%C3%AFc,+Sants-Montju%C3%AFc,+Barcellona,+Spagna/@41.3663448,2.1567675,15z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a26c577b0a6f:0x1c43588300ab7610!8m2!3d41.3663448!4d2.1567675!16s%2Fg%2F11y9tyc97?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                     </span>
                 </div>
             </div>
@@ -198,7 +234,7 @@
                 <div class="title">
                     <span>Bunkers del Carmel</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/Bunkers+del+Carmel/@41.419236,2.161779,13z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a34ce3cd2c89:0x78eec059f995ffe3!8m2!3d41.419236!4d2.161779!16s%2Fg%2F11l2_xprch?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/Bunkers+del+Carmel/@41.419236,2.161779,13z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a34ce3cd2c89:0x78eec059f995ffe3!8m2!3d41.419236!4d2.161779!16s%2Fg%2F11l2_xprch?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                     </span>
                 </div>
             </div>
@@ -206,7 +242,7 @@
                 <div class="title">
                     <span>Arc de Triomf</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/Arco+di+Trionfo/@41.4051517,2.1414737,13z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a2e3366a76a1:0xa9fe2baff53795b1!8m2!3d41.3910524!4d2.1806449!16zL20vMGJqeTZ4?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/Arco+di+Trionfo/@41.4051517,2.1414737,13z/data=!4m15!1m8!3m7!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!2sBarcellona,+Spagna!3b1!8m2!3d41.3874374!4d2.1686496!16zL20vMDFmNjI!3m5!1s0x12a4a2e3366a76a1:0xa9fe2baff53795b1!8m2!3d41.3910524!4d2.1806449!16zL20vMGJqeTZ4?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                     </span>
                 </div>
             </div>
@@ -214,7 +250,7 @@
                 <div class="title">
                     <span>Ciutat Vella</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/Ciutat+Vella,+Barcellona,+Spagna/@41.3749781,2.1814056,14z/data=!3m1!4b1!4m6!3m5!1s0x12a4a2f628927535:0x9261a9f64a1b3b12!8m2!3d41.3839789!4d2.1787364!16zL20vMDFxXzFj?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/Ciutat+Vella,+Barcellona,+Spagna/@41.3749781,2.1814056,14z/data=!3m1!4b1!4m6!3m5!1s0x12a4a2f628927535:0x9261a9f64a1b3b12!8m2!3d41.3839789!4d2.1787364!16zL20vMDFxXzFj?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                     </span>
                 </div>
             </div>
@@ -222,7 +258,7 @@
                 <div class="title">
                     <span>Barceloneta</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/La+Barceloneta,+Ciutat+Vella,+Barcellona,+Spagna/@41.3728236,2.1704713,14z/data=!3m1!4b1!4m6!3m5!1s0x12a4a30709605c93:0x2600fae14082f052!8m2!3d41.3801061!4d2.1896957!16s%2Fm%2F02xbjlb?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/La+Barceloneta,+Ciutat+Vella,+Barcellona,+Spagna/@41.3728236,2.1704713,14z/data=!3m1!4b1!4m6!3m5!1s0x12a4a30709605c93:0x2600fae14082f052!8m2!3d41.3801061!4d2.1896957!16s%2Fm%2F02xbjlb?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                     </span>
                 </div>
             </div>
@@ -230,7 +266,7 @@
                 <div class="title">
                     <span>Palau de la musica catalana</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/Palau+de+la+M%C3%BAsica+Catalana/@41.3875752,2.1753128,16z/data=!4m15!1m8!3m7!1s0x12a4a2f628927535:0x9261a9f64a1b3b12!2sCiutat+Vella,+Barcellona,+Spagna!3b1!8m2!3d41.3839789!4d2.1787364!16zL20vMDFxXzFj!3m5!1s0x12a4a2fa77ab0441:0x7faa64b56a736c43!8m2!3d41.3875752!4d2.1753128!16zL20vMHFsbTI?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/Palau+de+la+M%C3%BAsica+Catalana/@41.3875752,2.1753128,16z/data=!4m15!1m8!3m7!1s0x12a4a2f628927535:0x9261a9f64a1b3b12!2sCiutat+Vella,+Barcellona,+Spagna!3b1!8m2!3d41.3839789!4d2.1787364!16zL20vMDFxXzFj!3m5!1s0x12a4a2fa77ab0441:0x7faa64b56a736c43!8m2!3d41.3875752!4d2.1753128!16zL20vMHFsbTI?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                         <a href="https://tickets.palaumusica.cat/it-IT/513/10450?s=maps&f=nav&lang=it-IT"><img class="exlink" src="https://www.svgrepo.com/show/529545/dollar.svg"></a>
                     </span>
                 </div>
@@ -239,7 +275,7 @@
                 <div class="title">
                     <span>Recinte Modernista de Sant Pau</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/Recinte+Modernista+de+Sant+Pau/@41.4094146,2.1757676,16z/data=!3m1!5s0x12a4a2e6b34d9f6b:0x8b4f9bf3b806a5fa!4m14!1m7!3m6!1s0x12a4a2cfe0014027:0x1fac5228bd2718f!2sRecinte+Modernista+de+Sant+Pau!8m2!3d41.4117072!4d2.1743395!16zL20vMHFsbHA!3m5!1s0x12a4a2cfe0014027:0x1fac5228bd2718f!8m2!3d41.4117072!4d2.1743395!16zL20vMHFsbHA?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/Recinte+Modernista+de+Sant+Pau/@41.4094146,2.1757676,16z/data=!3m1!5s0x12a4a2e6b34d9f6b:0x8b4f9bf3b806a5fa!4m14!1m7!3m6!1s0x12a4a2cfe0014027:0x1fac5228bd2718f!2sRecinte+Modernista+de+Sant+Pau!8m2!3d41.4117072!4d2.1743395!16zL20vMHFsbHA!3m5!1s0x12a4a2cfe0014027:0x1fac5228bd2718f!8m2!3d41.4117072!4d2.1743395!16zL20vMHFsbHA?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                         <a href="https://santpaubarcelona.org/en/visita/visita-lliure/"><img class="exlink" src="https://www.svgrepo.com/show/529545/dollar.svg"></a>
                     </span>
                 </div>
@@ -248,10 +284,11 @@
                 <div class="title">
                     <span>Gran Teatre del Liceu</span>
                     <span>
-                        <a href="https://www.google.com/maps/place/Gran+Teatre+del+Liceu/@41.3802009,2.1707199,17z/data=!3m2!4b1!5s0x12a4a258095f2359:0x15e622ccfb2611fc!4m6!3m5!1s0x12a4a2580540cc5b:0xa05d8e0a1059639d!8m2!3d41.3801969!4d2.1732948!16zL20vMDFzcGo4?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
+                        <a class="place" href="https://www.google.com/maps/place/Gran+Teatre+del+Liceu/@41.3802009,2.1707199,17z/data=!3m2!4b1!5s0x12a4a258095f2359:0x15e622ccfb2611fc!4m6!3m5!1s0x12a4a2580540cc5b:0xa05d8e0a1059639d!8m2!3d41.3801969!4d2.1732948!16zL20vMDFzcGo4?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"><img class="exlink" src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"></a>
                     </span>
                 </div>
             </div>
+            <div id="map"></div>
         </div>
     </body>
-</html>
+    </html>
