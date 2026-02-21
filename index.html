@@ -214,6 +214,7 @@
                         iconAnchor: [22, 94],
                         popupAnchor: [-3, -76]
                     })
+                    map.scrollWheelZoom.disable();
                     Array.from(arr).forEach(function(i){
                         name = i.parentNode.parentNode.getElementsByTagName("span")[0].innerHTML
                         id = "d"+(j++);
