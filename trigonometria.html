@@ -16,7 +16,6 @@
         #circle{
             border: 5px solid white;
             border-radius: 50%;
-            width: 50%;
         }
     </style>
     <script>
@@ -26,6 +25,7 @@
             console.debug(height)
             circle = document.getElementById("circle");
             circle.setAttribute("width",height);
+            circle.setAttribute("height",height);
         }
     </script>
 </head>
