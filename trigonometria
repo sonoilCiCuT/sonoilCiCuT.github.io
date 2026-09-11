@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            background-color: black;
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            background-color: black;
+        }
+        #circle{
+            border: 5px solid white;
+            border-radius: 50%;
+            width: 50%;
+        }
+    </style>
+    <script>
+        var circle,height;
+        function init(){
+            height = document.getElementsByTagName("html")[0].clientHeight;
+            console.debug(height)
+            circle = document.getElementById("circle");
+            circle.setAttribute("width",height);
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div id="circle"></div>
+</body>
+</html>
