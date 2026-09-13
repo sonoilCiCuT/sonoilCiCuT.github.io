@@ -25,10 +25,10 @@
     <script>
         var circle,height;
         function init(){
-            height = document.getElementsByTagName("html")[0].clientHeight;
+            height = (document.getElementsByTagName("html")[0].clientHeight);
             console.debug(height)
             circle = document.getElementById("circle");
-            circle.setAttribute("style","width: "+height+"px;height: "+height+"px");
+            circle.setAttribute("style","width: "+height*0.6+"px;height: "+height*0.6+"px,left:"+height*0.6/2+"px,top:"+height*0.6/2+"px");
         }
     </script>
 </head>
